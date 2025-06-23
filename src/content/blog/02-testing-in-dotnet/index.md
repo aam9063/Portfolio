@@ -1,7 +1,7 @@
 ---
 title: "Building a Comprehensive Testing Strategy for .NET Backend Applications"
 summary: "A deep dive into implementing a multi-layered testing approach with Docker containers, Clean Architecture validation, and CQRS pattern testing"
-date: "Jun 24 2025"
+date: "Jun 23 2025"
 draft: false
 tags:
 - .NET
