@@ -193,7 +193,3 @@ Here’s a quick recap:
 
 ---
 
-💡 Want to see these practices in action? Visit my [GitHub](https://github.com/aam9063) or explore live projects on my [portfolio site](https://codewithalbert.netlify.app). I regularly apply testing strategies like these in React and full-stack projects using .NET, PostgreSQL, and more.
-
-Let me know if you’d like a follow-up post diving into **mocking APIs with MSW** or **test-driven development in React**!
-
