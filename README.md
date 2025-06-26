@@ -1,9 +1,3 @@
-Te voy a crear un README.md personalizado para tu portfolio/blog. Primero déjame revisar algunos detalles de tu proyecto para hacerlo más específico:
-Read file: src/consts.ts
-Read file: package.json
-Ran tool
-Perfecto! Basándome en la información de tu proyecto, aquí tienes un README.md personalizado para tu portfolio/blog:
-
 ```markdown
 # 💼 Albert Alarcón | Portfolio & Blog
 
@@ -11,7 +5,7 @@ Bienvenido a mi portfolio personal y blog de desarrollo de software. Un sitio es
 
 ## 🚀 Demo en Vivo
 
-[Ver Portfolio](https://tu-dominio.com) <!-- Actualiza con tu URL real -->
+[Ver Portfolio](https://codewithalbert.netlify.app/) 
 
 ## 👨‍💻 Sobre Mí
 
@@ -50,7 +44,6 @@ src/
 ├── content/        # Contenido del blog y proyectos
 │   ├── blog/       # Posts del blog
 │   ├── projects/   # Proyectos destacados
-│   └── work/       # Experiencia laboral
 ├── layouts/        # Plantillas de página
 ├── pages/          # Rutas de la aplicación
 ├── styles/         # Estilos globales
