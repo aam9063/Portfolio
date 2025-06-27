@@ -147,5 +147,5 @@ Make sure to update your SDKs and explore the new capabilities. You’ll find th
 
 *Written by Albert Alarcón – Software Developer | [LinkedIn](https://www.linkedin.com/in/albertalarcon-software-developer/)*
 
-```
+
 
