@@ -1,7 +1,6 @@
 ---
 title: "JavaScript Temporal Is Coming: The Modern Way to Handle Dates & Times"
-summary: "JavaScript is long overdue for a better way to handle dates and times—and **Temporal** is set to revolutionize this. Introduced in an MDN blog post on **January 24, 2025**, Temporal is already rolling out in experimental browser versions, signaling a major shift in how we work with time in JS ([developer.mozilla.org][1]).
-"
+summary: "JavaScript is long overdue for a better way to handle dates and times—and **Temporal** is set to revolutionize this. Introduced in an MDN blog post on **January 24, 2025**, Temporal is already rolling out in experimental browser versions, signaling a major shift in how we work with time in JS"
 date: "Jul 1, 2025"
 draft: false
 tags:
@@ -16,7 +15,7 @@ The built-in `Date` object has serious limitations:
 * Limited to local and UTC time only—no true time zone support
 * Unreliable parsing and mutability leading to hard-to-debug bugs
 * No support for different calendars or historical date quirks
-* Complex DST and time zone math ([medium.com][2], [developer.mozilla.org][1])
+* Complex DST and time zone math 
 
 Developers have long relied on libraries like **Moment.js** or **date-fns** to patch these holes. Temporal solves these challenges at the language level, enabling robust, deterministic time handling.
 
@@ -32,7 +31,7 @@ Temporal introduces a suite of classes—over 200 static methods—designed to a
 | `Temporal.Instant`                                                                        | A unique point in time (nanosecond precision)                                                                           |
 | `Temporal.ZonedDateTime`                                                                  | Datetime tied to a specific IANA time zone                                                                              |
 | `Temporal.PlainDateTime` / `PlainDate` / `PlainTime` / `PlainYearMonth` / `PlainMonthDay` | Represent 'date' or 'time' *without* time zone (e.g. events, birthdays)                                                 |
-| `Temporal.Now`                                                                            | Convenient methods to fetch the current instant, date, or time ([developer.mozilla.org][1], [developer.mozilla.org][3]) |
+| `Temporal.Now`                                                                            | Convenient methods to fetch the current instant, date, or time  |
 
 * **Immutability**: objects don’t change once created
 * **Time zone support**: full IANA database integration
@@ -60,7 +59,7 @@ const nextWeek = today.add({ days: 7 });
 console.log(nextWeek.toString());
 ```
 
-Effortlessly add durations (days, months, hours) without mutating original objects ([developer.mozilla.org][3]).
+Effortlessly add durations (days, months, hours) without mutating original objects.
 
 ### Working with Timestamps
 
