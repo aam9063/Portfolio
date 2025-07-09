@@ -13,7 +13,7 @@ tags:
 
 First, we need to set up the Stripe configuration and service. The project uses the `Stripe.net` NuGet package (version 48.0.2) for integration.
 
-```csharp:DogWalk_Infrastructure/Services/Stripe/StripeOptions.cs
+```csharp
 public class StripeOptions
 {
     public string SecretKey { get; set; } = string.Empty;
