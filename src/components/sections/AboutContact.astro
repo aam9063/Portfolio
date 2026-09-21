@@ -1,0 +1,64 @@
+---
+import Container from "@components/Container.astro"
+import type { Socials } from "@types"
+
+type Props = {
+  socials: Socials
+}
+
+const { socials } = Astro.props
+---
+
+<section id="contact" class="animate py-24">
+  <Container size="content">
+    <div class="grid md:grid-cols-2 gap-10">
+      <div>
+        <p class="font-mono text-sm uppercase tracking-wide text-faint">
+          About
+        </p>
+        <h2 class="mt-2 text-2xl md:text-3xl font-semibold text-text">
+          Let's build something real
+        </h2>
+        <p class="mt-4 text-muted">
+          I'm a junior full-stack engineer at Softtek, working toward Forward Deployed Engineer and AI Builder roles. I like sitting with real clients, understanding messy workflows, and shipping working software fast with an agent-first process.
+        </p>
+        <a
+          href="/cv/Albert_Alarcon_FDE.pdf"
+          download
+          class="mt-6 w-fit group flex gap-2 items-center px-4 py-2 rounded border border-border hover:bg-panel blend"
+        >
+          <svg class="size-4 stroke-current">
+            <use href="/ui.svg#download"/>
+          </svg>
+          <span class="text-sm md:text-base text-text">
+            Download resume
+          </span>
+        </a>
+      </div>
+
+      <div class="space-y-2">
+        <p class="font-mono text-sm uppercase tracking-wide text-faint">
+          Contact
+        </p>
+        <div class="grid grid-cols-4 gap-x-6 gap-y-3 mt-4 auto-cols-min">
+          {socials.map((social) => (
+            <>
+              <div class="col-span-1 flex items-center gap-1">
+                <span class="whitespace-nowrap truncate text-sm">
+                  {social.NAME}
+                </span>
+              </div>
+              <div class="col-span-3 truncate">
+                <a href={social.HREF} target="_blank" class="w-fit col-span-3 group flex gap-1 items-center underline decoration-[.5px] decoration-border hover:decoration-text text-text underline-offset-2 blend">
+                  <span class="text-sm text-muted group-hover:text-text blend">
+                    {social.TEXT}
+                  </span>
+                </a>
+              </div>
+            </>
+          ))}
+        </div>
+      </div>
+    </div>
+  </Container>
+</section>

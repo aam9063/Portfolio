@@ -4,21 +4,87 @@
 
 :root {
   --copy-btn-margin: 10px;
+
+  /* Light palette (default) */
+  --bg: 251 252 252;
+  --panel: 242 245 244;
+  --card: 255 255 255;
+  --border: 226 232 230;
+  --text: 14 20 20;
+  --text-muted: 74 86 84;
+  --text-faint: 124 136 133;
+  --accent: 13 148 136;
+  --accent-strong: 15 118 110;
+  --accent-deep: 17 94 89;
+}
+
+html.dark {
+  /* Dark palette */
+  --bg: 10 14 14;
+  --panel: 13 19 19;
+  --card: 16 22 22;
+  --border: 27 34 34;
+  --text: 231 236 236;
+  --text-muted: 174 184 184;
+  --text-faint: 85 99 95;
+  --accent: 45 212 191;
+  --accent-strong: 20 184 166;
+  --accent-deep: 13 148 136;
 }
 
 @layer base {
   @font-face {
-    font-family: "Atkinson";
-    src: url("/fonts/atkinson-regular.woff") format("woff");
+    font-family: "Poppins";
+    src: url("/fonts/poppins-400.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
   }
 
   @font-face {
-    font-family: "Atkinson";
-    src: url("/fonts/atkinson-bold.woff") format("woff");
+    font-family: "Poppins";
+    src: url("/fonts/poppins-500.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Poppins";
+    src: url("/fonts/poppins-600.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Poppins";
+    src: url("/fonts/poppins-700.woff2") format("woff2");
     font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Poppins";
+    src: url("/fonts/poppins-800.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "JetBrains Mono";
+    src: url("/fonts/jetbrains-mono-400.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "JetBrains Mono";
+    src: url("/fonts/jetbrains-mono-500.woff2") format("woff2");
+    font-weight: 500;
     font-style: normal;
     font-display: swap;
   }
@@ -27,21 +93,22 @@
 html {
   overflow-y: scroll;
   color-scheme: light;
-  background-color: white;
-  font-family: "Atkinson", sans-serif;
-
+  background-color: rgb(var(--bg));
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
 }
 
 html.dark {
   color-scheme: dark;
-  background-color: black;
+  background-color: rgb(var(--bg));
 }
 
 html,
 body {
   @apply h-full w-full antialiased;
-  @apply bg-white dark:bg-black;
-  @apply text-black/75 dark:text-white/75;
+  @apply bg-bg;
+  @apply text-muted;
 }
 
 body {
@@ -49,7 +116,7 @@ body {
 }
 
 main {
-  @apply flex flex-col flex-1 bg-white dark:bg-black;
+  @apply flex flex-col flex-1 bg-bg;
 }
 
 header {
@@ -62,8 +129,8 @@ header:not(.scrolled) {
 }
 
 header.scrolled {
-  @apply bg-white/75 dark:bg-black/50;
-  @apply border-black/10 dark:border-white/25;
+  @apply bg-bg/75;
+  @apply border-border;
   @apply backdrop-blur-sm saturate-200;
 }
 
@@ -72,22 +139,11 @@ article {
 }
 
 .page-heading {
-  @apply font-semibold text-black dark:text-white;
+  @apply font-semibold text-text;
 }
 
 .blend {
   @apply transition-all duration-300 ease-in-out;
-}
-
-/** Light theme particles on home page */
-@keyframes animateParticle {
-  from {
-    transform: translateY(0px);
-  }
-
-  to {
-    transform: translateY(-2000px);
-  }
 }
 
 /** styles for public /animation.js */
@@ -103,59 +159,12 @@ article {
 }
 
 article img {
+  width: 100%;
+  height: auto;
   padding-top: 20px;
   padding-bottom: 20px;
   display: block;
   margin: 0 auto;
-}
-
-/**
- * TWINKLE STARS
- */
-
-#twinkle-star.template {
-  @apply absolute -left-full;
-  /* hide offscreen */
-}
-
-#twinkle-star.twinkle {
-  @apply animate-twinkle;
-  /* defined in tailwind.config */
-}
-
-
-/**
- * Meteors
- */
-
-#meteors .shower {
-  @apply absolute inset-0 top-0;
-  ;
-  @apply left-1/2 -translate-x-1/2;
-  @apply w-screen aspect-square;
-}
-
-#meteors .meteor {
-  @apply animate-meteor;
-  /* defined in tailwind.config */
-  @apply absolute top-1/2 left-1/2 w-px h-[75vh];
-  @apply bg-gradient-to-b from-white to-transparent;
-}
-
-#meteors .shower.ur {
-  @apply rotate-45;
-}
-
-#meteors .shower.dr {
-  @apply rotate-135;
-}
-
-#meteors .shower.dl {
-  @apply rotate-225;
-}
-
-#meteors .shower.ul {
-  @apply rotate-315;
 }
 
 .copy-cnt {
@@ -172,15 +181,3 @@ article img {
 .copy-svg {
   @apply w-full aspect-square text-white opacity-70 hover:opacity-90;
 }
-
-/* Card transition */
-/* .fade-move-enter-active,
-.fade-move-exit-active {
-  transition: all 300ms ease;
-}
-
-.fade-move-enter-from,
-.fade-move-exit-to {
-  opacity: 0;
-  transform: translateY(10px);
-} */

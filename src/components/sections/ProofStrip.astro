@@ -1,0 +1,39 @@
+---
+type Item = {
+  icon: string
+  label: string
+  href?: string
+}
+
+type Props = {
+  items: Item[]
+}
+
+const { items } = Astro.props
+---
+
+<section id="proof" class="py-24">
+  <div class="animate grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-5xl mx-auto px-5">
+    {items.map((item) => (
+      <div class="flex items-start gap-3">
+        <svg class="size-5 mt-0.5 shrink-0 stroke-current text-faint">
+          <use href={`/ui.svg#${item.icon}`}/>
+        </svg>
+        {item.href ? (
+          <a
+            href={item.href}
+            target={item.href.startsWith("http") ? "_blank" : undefined}
+            rel={item.href.startsWith("http") ? "noopener" : undefined}
+            class="text-sm md:text-base text-muted underline decoration-[.5px] decoration-border hover:decoration-text hover:text-text blend"
+          >
+            {item.label}
+          </a>
+        ) : (
+          <span class="text-sm md:text-base text-muted">
+            {item.label}
+          </span>
+        )}
+      </div>
+    ))}
+  </div>
+</section>

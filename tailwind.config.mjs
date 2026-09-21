@@ -7,51 +7,30 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        "sans": ["Atkinson", ...defaultTheme.fontFamily.sans],
+        "sans": ["Poppins", ...defaultTheme.fontFamily.sans],
+        "mono": ["JetBrains Mono", ...defaultTheme.fontFamily.mono],
+      },
+      colors: {
+        bg: "rgb(var(--bg) / <alpha-value>)",
+        panel: "rgb(var(--panel) / <alpha-value>)",
+        card: "rgb(var(--card) / <alpha-value>)",
+        border: "rgb(var(--border) / <alpha-value>)",
+        text: "rgb(var(--text) / <alpha-value>)",
+        muted: "rgb(var(--text-muted) / <alpha-value>)",
+        faint: "rgb(var(--text-faint) / <alpha-value>)",
+        accent: {
+          DEFAULT: "rgb(var(--accent) / <alpha-value>)",
+          strong: "rgb(var(--accent-strong) / <alpha-value>)",
+          deep: "rgb(var(--accent-deep) / <alpha-value>)",
+        },
+      },
+      maxWidth: {
+        content: "72.5rem",
       },
       typography: {
         DEFAULT: {
           css: {
             maxWidth: "full",
-          },
-        },
-      },
-      rotate: {
-        "45": "45deg",
-        "135": "135deg",
-        "225": "225deg",
-        "315": "315deg",
-      },
-      animation: {
-        twinkle: "twinkle 2s ease-in-out forwards",
-        meteor: "meteor 3s ease-in-out forwards",
-      },
-      keyframes: {
-        twinkle: {
-          "0%": { 
-            opacity: 0, 
-            transform: "rotate(0deg)" 
-          },
-          "50%": { 
-            opacity: 1,
-            transform: "rotate(180deg)" 
-          },
-          "100%": { 
-            opacity: 0, 
-            transform: "rotate(360deg)" 
-          },
-        },
-        meteor: {
-          "0%": { 
-            opacity: 0, 
-            transform: "translateY(200%)" 
-          },
-          "50%": { 
-            opacity: 1  
-          },
-          "100%": { 
-            opacity: 0, 
-            transform: "translateY(0)" 
           },
         },
       },

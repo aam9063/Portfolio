@@ -33,19 +33,25 @@ export const SEARCH: Page = {
 
 // Links
 export const LINKS: Links = [
-  { 
-    TEXT: "Home", 
-    HREF: "/", 
+  {
+    TEXT: "Case studies",
+    HREF: "/#case-studies",
   },
-  { 
-    TEXT: "Blog", 
-    HREF: "/blog", 
+  {
+    TEXT: "How I work",
+    HREF: "/#how-i-work",
   },
-  { 
-    TEXT: "Projects", 
-    HREF: "/projects", 
+  {
+    TEXT: "Blog",
+    HREF: "/blog",
   },
 ]
+
+// Contact call-to-action, rendered as a button (not a plain nav link)
+export const CONTACT_CTA: Links[number] = {
+  TEXT: "Contact",
+  HREF: "/#contact",
+}
 
 // Socials
 export const SOCIALS: Socials = [
