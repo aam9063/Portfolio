@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from "astro:content"
 import Container from "@components/Container.astro"
+import CarouselSupport from "@components/CarouselSupport.astro"
 import { formatDate, readingTime } from "@lib/utils"
 import { CASE_STUDY_SECTIONS } from "@lib/caseStudy"
 
@@ -104,9 +105,10 @@ if (import.meta.env.DEV) {
           ))}
         </nav>
       )}
-      <article class="lg:col-start-2">
+      <article class="lg:col-start-2 min-w-0">
         <Content/>
       </article>
     </div>
+    <CarouselSupport />
   </Container>
 </div>
