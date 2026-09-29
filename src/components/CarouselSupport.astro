@@ -77,8 +77,11 @@
     new Swiper(el, {
       modules: [Navigation, Pagination],
       grabCursor: true,
-      pagination: { el: el.querySelector(".swiper-pagination"), clickable: true },
-      navigation: { nextEl: el.querySelector(".swiper-button-next"), prevEl: el.querySelector(".swiper-button-prev") },
+      pagination: { el: el.querySelector<HTMLElement>(".swiper-pagination"), clickable: true },
+      navigation: {
+        nextEl: el.querySelector<HTMLElement>(".swiper-button-next"),
+        prevEl: el.querySelector<HTMLElement>(".swiper-button-prev"),
+      },
     })
   })
 </script>
