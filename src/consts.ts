@@ -45,6 +45,10 @@ export const LINKS: Links = [
     TEXT: "Blog",
     HREF: "/blog",
   },
+  {
+    TEXT: "CV",
+    HREF: "https://albertalarcon-cv-deck.netlify.app/",
+  },
 ]
 
 // Contact call-to-action, rendered as a button (not a plain nav link)
