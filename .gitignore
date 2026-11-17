@@ -21,3 +21,6 @@ pnpm-debug.log*
 .DS_Store
 # Local Pi runtime state
 .atl/
+
+# Local Claude Code runtime state
+.claude/
