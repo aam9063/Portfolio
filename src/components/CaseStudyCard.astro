@@ -7,8 +7,7 @@ type Props = {
 }
 
 const { entry } = Astro.props
-const { title, summary, tags, status, image, iconImage } = entry.data
-const isComingSoon = status === "coming-soon"
+const { title, summary, tags, image, iconImage } = entry.data
 
 const iconMap: Record<string, string> = {
   factuscan: "scan",
@@ -46,18 +45,12 @@ const cardClasses = "group h-full flex flex-col gap-4 p-5 rounded-lg bg-card bor
         </li>
       ))}
     </ul>
-    {isComingSoon ? (
-      <span class="font-mono text-xs uppercase py-0.5 px-2 rounded-full border border-border">
-        Coming soon
-      </span>
-    ) : (
-      <span class="w-fit flex gap-1 items-center text-sm font-medium text-muted group-hover:text-text blend">
-        Read case study
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="stroke-current">
-          <line x1="5" y1="12" x2="19" y2="12" class="scale-x-0 group-hover:scale-x-100 translate-x-4 group-hover:translate-x-1 transition-all duration-300 ease-in-out" />
-          <polyline points="12 5 19 12 12 19" class="translate-x-0 group-hover:translate-x-1 transition-all duration-300 ease-in-out" />
-        </svg>
-      </span>
-    )}
+    <span class="w-fit flex gap-1 items-center text-sm font-medium text-muted group-hover:text-text blend">
+      Read case study
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="stroke-current">
+        <line x1="5" y1="12" x2="19" y2="12" class="scale-x-0 group-hover:scale-x-100 translate-x-4 group-hover:translate-x-1 transition-all duration-300 ease-in-out" />
+        <polyline points="12 5 19 12 12 19" class="translate-x-0 group-hover:translate-x-1 transition-all duration-300 ease-in-out" />
+      </svg>
+    </span>
   </div>
 </a>

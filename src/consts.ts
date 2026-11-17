@@ -76,6 +76,12 @@ export const SOCIALS: Socials = [
     ICON: "linkedin",
     TEXT: "Albert Alarcón Martínez",
     HREF: "https://www.linkedin.com/in/albertalarcon-software-developer/",
+  },
+  { 
+    NAME: "X",
+    ICON: "twitter-x",
+    TEXT: "@albertalarcon10",
+    HREF: "https://x.com/albertalarcon10"
   }
 ]
 
